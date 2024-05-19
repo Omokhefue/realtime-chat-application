@@ -1,5 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import Sidebar from "../../components/sidebar/Sidebar";
+import ChatList from "../../components/chat/ChatList";
+import ChatWindow from "../../components/chat/ChatWindow";
 
 const Dashboard = () => {
   return (
@@ -27,10 +29,21 @@ const Dashboard = () => {
         colSpan={{ base: 12, sm: 11, smmd: 6, md: 7, lg: 8 }}
         bg="#f9fafc"
         borderRadius={"30px"}
+        height="100%"
       >
-        <Grid templateColumns="repeat(8, 1fr)">
-          <GridItem colSpan={{ md: 3 }} />
-          <GridItem colSpan={{ md: 5 }}></GridItem>
+        <Grid
+          templateColumns="repeat(8, 1fr)"
+          color="black"
+          gap={3}
+          h="inherit"
+          padding={3}
+        >
+          <GridItem colSpan={{ sm: 3, md: 3 }} height="570px">
+            <ChatList />
+          </GridItem>
+          <GridItem colSpan={{ sm: 5, md: 5 }}>
+            <ChatWindow />
+          </GridItem>
         </Grid>
       </GridItem>
 
