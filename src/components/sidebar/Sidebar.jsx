@@ -1,6 +1,6 @@
 import { Flex, Box } from "@chakra-ui/react";
-
 import { Divider } from "@chakra-ui/react";
+
 import Profile from "./Profile";
 import AllChats from "./AllChats";
 import ArchivedChats from "./ArchivedChats";
@@ -16,7 +16,7 @@ const Sidebar = () => {
       alignItems="center"
       justifyContent="space-between"
       flexDir="column"
-      h="100%"
+      h="95%"
       mt={3}
     >
       <Box>
